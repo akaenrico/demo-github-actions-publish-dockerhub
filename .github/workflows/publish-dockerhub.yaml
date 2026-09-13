@@ -1,4 +1,4 @@
-name: Publish Docker
+name: Publish DockerHub
 
 on: [push]
 
@@ -17,7 +17,7 @@ jobs:
           go-version: ${{ matrix.go-version }}
 
       - name: Validate Go code
-        working-directory: ./01-publish-dockerhub
+        working-directory: ./
         run: go vet ./...
 
   publish:
@@ -35,5 +35,5 @@ jobs:
         uses: docker/build-push-action@v7
         with:
           push: true
-          context: ./01-publish-dockerhub
+          context: ./
           tags: ${{ vars.DOCKERHUB_USERNAME }}/demo:${{ github.sha }}
