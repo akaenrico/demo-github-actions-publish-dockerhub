@@ -36,4 +36,4 @@ jobs:
         with:
           push: true
           context: ./
-          tags: ${{ vars.DOCKERHUB_USERNAME }}/demo:${{ github.sha }}
+          tags: ${{ vars.DOCKERHUB_USERNAME }}/demo:${{ github.run_number }}
