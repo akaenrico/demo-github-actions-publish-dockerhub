@@ -10,3 +10,5 @@ The Action runs on every push made in any branches. It is composed by two differ
 | ---------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
 | `validate` | Checkout code, setup a Go environment and run the `go vet ./...` command to examine the source code and reports suspicious constructs           |
 | `publish`  | Checkout code, authenticate to DockerHub using the DockerHub token passed as a repository secret, build the image and finally push to DockerHub |
+
+Hire me pls, much love
